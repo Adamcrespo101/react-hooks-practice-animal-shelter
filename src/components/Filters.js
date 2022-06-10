@@ -1,11 +1,14 @@
 import React from "react";
 
-function Filters() {
+function Filters({filters, setFilters}) {
+
+
+
   return (
     <div className="ui form">
       <h3>Animal type</h3>
       <div className="field">
-        <select name="type" id="type" aria-label="type">
+        <select name="type" id="type" aria-label="type" onChange={(e) => setFilters(e.target.value)}>
           <option value="all">All</option>
           <option value="cat">Cats</option>
           <option value="dog">Dogs</option>
